@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "payment-domain"
+version = "0.1.0"
+description = "Common domain models for payment-related services"
+authors = ["Mikel <mikel.opensource@gmail.es>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.9.1"
+svix-ksuid = "^0.6.2"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+mypy = "^1.11.2"
+isort = "^5.13.2"
+pre-commit = "^3.8.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.mypy]
+python_version = 3.12
+ignore_missing_imports = true
+check_untyped_defs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+
+[tool.isort]
+profile = "black"
+known_third_party = ["pydantic", "ksuid", "pytest"]  # List any third-party libraries you are using
+line_length = 88  # To match the black formatter
+
