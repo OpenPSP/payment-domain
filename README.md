@@ -26,7 +26,7 @@ To install `payment-domain` directly from GitHub:
 1. Add the following line to your `pyproject.toml` in the `[tool.poetry.dependencies]` section:
 
     ```toml
-    payment-domain = { git = "https://github.com/yourusername/payment-domain.git", branch = "main" }
+    payment-domain = { git = "https://github.com/OpenPSP/payment-domain.git", branch = "main" }
     ```
 
 2. Run the following command to install the package:
@@ -83,7 +83,7 @@ The `Payment` model represents a payment transaction and includes fields like `a
   - `currency`: Currency code in ISO 4217 format.
   - `status`: The current status of the payment (e.g., `created`, `processing`).
   - `metadata`: Additional metadata related to the payment.
-  
+
 ### Refund
 
 The `Refund` model represents a refund related to a payment transaction.
@@ -93,7 +93,7 @@ The `Refund` model represents a refund related to a payment transaction.
   - `amount`: The amount to be refunded.
   - `payment_id`: Reference to the original payment.
   - `status`: The current status of the refund (e.g., `created`, `succeeded`).
-  
+
 ### Merchant
 
 The `Merchant` model represents merchant information.
@@ -135,4 +135,3 @@ pytest
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
